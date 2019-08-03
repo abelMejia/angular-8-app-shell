@@ -1,0 +1,12 @@
+<section [formGroup]="parentForm">
+  <mat-form-field appearance="outline">
+    <mat-label>{{ label }}</mat-label>
+    <mat-select
+      [formControlName]="name"
+      disabled="{{ disabled }}"
+      required="{{ required }}"
+      (ngModelChange)="doChange($event)">
+      <mat-option *ngFor="let item of itemsList" [value]="item">{{ item.label }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</section>
