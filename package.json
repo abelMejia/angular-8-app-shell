@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "client-service": "rm -rf client-service-angular && git clone https://github.com/abelMejia/client-service-angular.git && mkdir -p src/app/shared/services && mv client-service-angular/client.service.ts src/app/shared/services && mkdir -p src/app/shared/interfaces && mv client-service-angular/options.interface.ts src/app/shared/interfaces && rm -rf src/app/shared/interfaces/products && mv client-service-angular/interfaces/products src/app/shared/interfaces && rm -rf src/app/shared/services/products && mv client-service-angular/services/products src/app/shared/services && rm -rf client-service-angular"
   },
   "private": true,
   "dependencies": {
